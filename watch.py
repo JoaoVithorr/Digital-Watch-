@@ -16,11 +16,11 @@ background_color = color1
 font_color = color3
 
 # Criando a janela
-window = Tk()
-window.title("")
-window.geometry("440x100") # Definindo tamanho da janela 
-window.resizable(width = FALSE, height = FALSE)
-window.configure(background= background_color)
+root = Tk()
+root.title("")
+root.geometry("440x100") # Definindo tamanho da janela 
+root.resizable(width = FALSE, height = FALSE)
+root.configure(background= background_color)
 
 from datetime import datetime
 # Obtendo a hora do dia e a data 
@@ -38,13 +38,13 @@ def watch():
     l2.config(text=day_week + "   " + str(day) + "/" + str(month) + "/" + (year))
 
 # Criando um label que mostra a hora
-l1 = Label(window, text="10:05:05", font=('Arial  80'), bg=background_color, fg=font_color)
+l1 = Label(root, text="10:05:05", font=('Arial  80'), bg=background_color, fg=font_color)
 l1.grid(row=0, column=0, sticky=NW, padx=5)
 
 # Criando outro label para a data
-l2 = Label(window,  font=('Arial  20'), bg=background_color, fg=font_color)
+l2 = Label(root,  font=('Arial  20'), bg=background_color, fg=font_color)
 l2.grid(row=1, column=0, sticky=NW, padx=5)
 
 # Executando o relógio
 watch() 
-window.mainloop()
+root.mainloop()
