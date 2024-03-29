@@ -1,2 +1,4 @@
-*Watch App:*
-A digital watch using tkinter and datetime 
+# Watch App
+A digital watch app using the libraries:
+* tkinter
+* pyglet
